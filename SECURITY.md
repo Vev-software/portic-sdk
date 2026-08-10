@@ -1,7 +1,7 @@
 # Security Policy
 
-If you believe you have found a vulnerability in $repoName or in a VEV service
-that consumes it, do **not** open a public issue.
+If you believe you have found a vulnerability in this repository or in a VEV
+service that consumes it, do **not** open a public issue.
 
 ## Reporting
 
