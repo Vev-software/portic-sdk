@@ -11,11 +11,15 @@ against without depending on the Portic runtime internals.
 - [`Portic.Client`](clients/dotnet/Portic.Client/README.md): a thin .NET `HttpClient` wrapper for the
   stable `POST /v1/messages` gateway surface.
 
-The repo now includes the release/publish workflow pattern used by the org's other package repos:
+Published on August 22, 2026:
+
+- `Portic.Sdk` `0.1.0` on **nuget.org**
+- `Portic.Client` `0.1.0` on **nuget.org**
+
+The repo includes the release/publish workflow pattern used by the org's other package repos:
 tagged releases produce GitHub Release artifacts, and the gated `publish.yml` workflow publishes the
-two NuGet packages to nuget.org. Public registry publishing still depends on the one-time Trusted
-Publishing bootstrap used by the org's other public packages. Until a published `Portic.Sdk`
-exists, `portic-community` continues to define the same shapes locally.
+two NuGet packages to nuget.org. `portic-community` can now consume `Portic.Sdk` from the public
+feed instead of carrying the SPI/contracts locally.
 
 ## What it is
 
@@ -32,7 +36,7 @@ exists, `portic-community` continues to define the same shapes locally.
 
 ## Getting started
 
-Not published yet — see Status above. Once published:
+Published packages:
 
 ```sh
 dotnet add package Portic.Sdk

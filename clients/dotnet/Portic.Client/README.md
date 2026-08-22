@@ -69,6 +69,7 @@ bump here.
 
 ## Links
 
+- **NuGet:** https://www.nuget.org/packages/Portic.Client
 - Source and issues: https://github.com/Vev-software/portic-sdk
 - Gateway runtime: https://github.com/Vev-software/portic-community
 

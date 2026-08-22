@@ -61,6 +61,11 @@ in the internal runbook.
 
 ## Current status
 
-Workflow and documentation are in-repo. Public registry publishing still depends on the
-one-time maintainer bootstrap on nuget.org and the `release` environment / `NUGET_USER`
-repo configuration being present.
+Live as of August 22, 2026:
+
+- `Portic.Sdk` `0.1.0` on **nuget.org**
+- `Portic.Client` `0.1.0` on **nuget.org**
+- `v0.1.0` GitHub Release and tag-driven release path working from `publish.yml`
+
+The one-time bootstrap and repo configuration are now in place. Future releases should use the same
+gated `publish.yml` flow from `main`.
