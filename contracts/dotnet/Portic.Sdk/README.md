@@ -55,6 +55,7 @@ normalized contracts requires a major version bump and an ADR (see `docs/adr/` i
 
 ## Links
 
+- **NuGet:** https://www.nuget.org/packages/Portic.Sdk
 - **Source & issues:** https://github.com/Vev-software/portic-sdk
 - **Gateway runtime (community edition):** https://github.com/Vev-software/portic-community
 
