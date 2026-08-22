@@ -11,9 +11,11 @@ against without depending on the Portic runtime internals.
 - [`Portic.Client`](clients/dotnet/Portic.Client/README.md): a thin .NET `HttpClient` wrapper for the
   stable `POST /v1/messages` gateway surface.
 
-Neither package is published to nuget.org yet; that still needs the one-time Trusted Publishing
-bootstrap used by the org's other public packages. Until a published `Portic.Sdk` exists,
-`portic-community` continues to define the same shapes locally.
+The repo now includes the release/publish workflow pattern used by the org's other package repos:
+tagged releases produce GitHub Release artifacts, and the gated `publish.yml` workflow publishes the
+two NuGet packages to nuget.org. Public registry publishing still depends on the one-time Trusted
+Publishing bootstrap used by the org's other public packages. Until a published `Portic.Sdk`
+exists, `portic-community` continues to define the same shapes locally.
 
 ## What it is
 
@@ -49,6 +51,7 @@ running Portic gateway over HTTP.
 - Breaking changes to a published contract require an ADR and a migration path.
 
 Repository decision records live under [`docs/adr/`](docs/adr/).
+Release/publish mechanics are documented in [`docs/releasing.md`](docs/releasing.md).
 
 ## Security
 
