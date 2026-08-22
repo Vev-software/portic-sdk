@@ -6,8 +6,13 @@ against without depending on the Portic runtime internals.
 
 ## Status
 
-Early bootstrap. Ownership, contribution and ADR scaffolding is in place; the SDK
-packages and provider SPI examples have not been published yet.
+The provider SPI and normalized chat contracts are extracted from `portic-community`
+(per its `docs/adr/0001-provider-spi-location.md`) and build/pack as a repo-local
+package baseline — see [`contracts/dotnet/Portic.Sdk`](contracts/dotnet/Portic.Sdk/README.md).
+Not yet published to nuget.org (that needs the one-time Trusted Publishing bootstrap
+used by the org's other public packages); the `portic-community` runtime still
+defines these types locally until a published version exists to switch to. A first
+client SDK package is tracked separately (`portic-sdk#3`).
 
 ## What it is
 
@@ -24,8 +29,14 @@ packages and provider SPI examples have not been published yet.
 
 ## Getting started
 
-SDK packages and provider SPI examples are not available yet. This section will
-cover installation and a first integration once the initial packages ship.
+Not published yet — see Status above. Once published:
+
+```sh
+dotnet add package Portic.Sdk
+```
+
+See [`contracts/dotnet/Portic.Sdk/README.md`](contracts/dotnet/Portic.Sdk/README.md)
+for how to implement a provider adapter against `IChatProvider`.
 
 ## Contributing
 

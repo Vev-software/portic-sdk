@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/contracts/" />
+  <Folder Name="/contracts/dotnet/">
+    <Project Path="contracts/dotnet/Portic.Sdk/Portic.Sdk.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Portic.Sdk.Tests/Portic.Sdk.Tests.csproj" />
+  </Folder>
+</Solution>

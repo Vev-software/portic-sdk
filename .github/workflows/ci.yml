@@ -1,0 +1,38 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build-test-format:
+    name: build · test · format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET (pinned by global.json)
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Restore
+        run: dotnet restore PorticSdk.slnx
+
+      # Build enforces analyzers + TreatWarningsAsErrors (Directory.Build.props).
+      - name: Build
+        run: dotnet build PorticSdk.slnx -c Release --no-restore
+
+      - name: Lint (format verify)
+        run: dotnet format PorticSdk.slnx --verify-no-changes --no-restore
+
+      - name: Test
+        run: dotnet test PorticSdk.slnx -c Release --no-build
