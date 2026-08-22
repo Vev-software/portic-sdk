@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Portic.Sdk</PackageId>
+    <Description>Public, versioned provider SPI (IChatProvider) and normalized chat contracts for Portic — VEV's AI gateway. The stable integration surface adapter authors and API consumers build against, without depending on the AGPL-3.0 runtime. Apache-2.0.</Description>
+    <PackageTags>portic;ai-gateway;spi;llm;interop</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,33 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <LangVersion>13.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <Deterministic>true</Deterministic>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!-- portic-sdk is PUBLIC, Apache-2.0 (README, AGENTS.md "Licensing" in portic-community). -->
+    <Company>VEV Software ApS</Company>
+    <Product>Portic</Product>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <Authors>VEV Software ApS</Authors>
+    <RepositoryUrl>https://github.com/Vev-software/portic-sdk</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+
+    <!-- The public integration surface is versioned; breaking it is expensive for every adapter
+         author. Version is derived from the git tag by MinVer: tag `vX.Y.Z` produces package
+         version X.Y.Z, commits after a tag produce a pre-release. No hand-maintained version
+         number in this repo (matches atlas-contracts / fabric). -->
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Build-time only: sets Version/PackageVersion from the git tag. -->
+    <PackageReference Include="MinVer" PrivateAssets="all" />
+  </ItemGroup>
+</Project>
