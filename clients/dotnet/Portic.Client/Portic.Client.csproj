@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Portic.Client</PackageId>
+    <Description>Thin .NET client for Portic's stable POST /v1/messages HTTP surface. Uses Portic.Sdk's normalized chat contracts and depends only on HttpClient and the base class library. Apache-2.0.</Description>
+    <PackageTags>portic;ai-gateway;http-client;llm;interop</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\contracts\dotnet\Portic.Sdk\Portic.Sdk.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+
+</Project>
