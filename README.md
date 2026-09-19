@@ -64,4 +64,7 @@ open a public issue for a security report.
 
 ## License
 
-Licensed under the [Apache License 2.0](LICENSE).
+Licensed under the [Apache License 2.0](LICENSE) — the permissive integration surface of
+Portic. Depend on `Portic.Sdk` and `Portic.Client` from proprietary code freely. See
+[`LICENSING.md`](LICENSING.md) for how this fits the open-core family (the AGPL/commercial
+runtime lives in `portic-community`). Contributions: [`CONTRIBUTING.md`](CONTRIBUTING.md).
